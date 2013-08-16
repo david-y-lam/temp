@@ -1,4 +1,4 @@
 temp
 ====
 
-temp_site
+Just a temporary homepage for my site.
