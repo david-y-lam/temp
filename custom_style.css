@@ -1,15 +1,19 @@
 .content_article {
-    text-align:center;
+     height: 100%;
+    -webkit-background-size: cover;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+     color: #fff;
+     text-align: center;
      position: relative;
-}
+ }
 
 .content-intro {
-		
+    background-image: url(./images/tree.jpg);
 }
 
 .content-middle {
-    background-size: cover;
-    background-position: center center;
     background-image: url(./images/sudi.JPG);
 }
 
