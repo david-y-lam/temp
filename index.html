@@ -1,42 +1,93 @@
 <html>
 <head>
-<title>Hello, World!</title>
-<style>
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="./style.css">
 
-</style>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="./jquery.glide.min.js"></script>
+  <style>
+    /**
+    * Demo styles
+    * Only for example purposes
+    * Remove in production
+    */
+    
+    /* Bad and ugly reset */
+    *{ margin: 0; padding: 0; border: 0; }
+    
+    .box {
+    width: 100%;
+    height: 100%;
+    }
+  </style>
+
 </head>
 
 <body>
-  <p>
-    Hi there! I'm David Lam. 
-  </p>
 
-  <p>
-    I'm originally from the great state of Tennessee, but you're the only ten I see. ;-)
-  </p>
+  <div class="slider">
+    <ul class="slides">
 
-  <p>
-    I recently <strike> graduated </strike> escaped from <a href="http://www.Dartmouth.edu">Dartmouth College</a>, and now
-    I'm a <a href="https://www.quora.com/Facebook-Engineering/What-is-it-like-to-be-a-Production-Engineer-at-Facebook">Production Engineer</a> 
-    at <strike>The</strike> <a href="https://www.facebook.com/david.yw.lam">Facebook</a>.
-  </p>
+      <li class="slide">
+	<p>
+	  Hi there! I'm David Lam.
+	</p>
+      </li>
 
-  <p>
-    You can find me on the internet below: 
-  </p>
+      <li class="slide">
+	<p>
+	  I'm originally from the great state of Tennessee, but you're the only ten I see. ;-)
+	</p>
+      </li>
 
-  <ul>
-    <li><a href="https://www.facebook.com/david.yw.lam">facebook</a></li>
-    <li><a href="https://www.linkedin.com/pub/david-lam/22/b6b/b07">linkedin</a></li>
-    <li><a href="https://github.com/david-y-lam">github</a></li>
-    <li><a href="https://www.quora.com/David-Lam-8">quora </a></li>
-    <li><a href="https://plus.google.com/111483278262685741018/">goodreads</a></li>
-    <li><a href="https://plus.google.com/111483278262685741018/">the other social network</a></li>
-  </ul>
+      <li class="slide">
+	<p>
+	  I recently <strike> graduated </strike> escaped from <a href="http://www.Dartmouth.edu">Dartmouth College</a>, and now
+	  I'm a <a href="https://www.quora.com/Facebook-Engineering/What-is-it-like-to-be-a-Production-Engineer-at-Facebook">Production Engineer</a>
+	  at <strike>The</strike> <a href="https://www.facebook.com/david.yw.lam">Facebook</a>.
+	</p>
+      </li>
 
-  <p>
-    Drop me a <a href="mailto:david@dylam.me">line.</a> 
-  </p>
+      <li class="slide">
+	<p>
+	  You can find me on the internet below:
+	</p>
+	<ul>
+	  <li><a href="https://www.facebook.com/david.yw.lam">facebook</a></li>
+	  <li><a href="https://www.linkedin.com/pub/david-lam/22/b6b/b07">linkedin</a></li>
+	  <li><a href="https://github.com/david-y-lam">github</a></li>
+	  <li><a href="https://www.quora.com/David-Lam-8">quora </a></li>
+	  <li><a href="https://plus.google.com/111483278262685741018/">goodreads</a></li>
+	  <li><a href="https://plus.google.com/111483278262685741018/">the other social network</a></li>
+	</ul>
+      </li>
+
+      <li class="slide">
+	<p>
+	  Drop me a <a href="mailto:david@dylam.me">line.</a>
+	</p>
+      </li>
+  </div>
+  
+  <script>
+			var glide = $('.slider').glide({
+					afterTransition: function() {
+						var currentSlide = this.currentSlide;
+						console.log(currentSlide);
+					}
+				}).data('api_glide');
+
+				$(window).on('keyup', function (key) {
+					if (key.keyCode === 13) {
+						glide.jump(3, console.log('Wooo!'));
+					};
+				});
+
+				$('.slider-arrow').on('click', function() {
+					console.log(glide.current());
+				});
+  </script>
+		
 </body>
 
 </html>
