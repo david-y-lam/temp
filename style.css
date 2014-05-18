@@ -1,3 +1,7 @@
+body{
+  color: black;
+}
+
 .slider {
   position: relative;
   width: 100%;

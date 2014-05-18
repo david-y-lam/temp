@@ -4,17 +4,16 @@
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center center;
-     color: #fff;
      text-align: center;
      position: relative;
  }
 
 .content-intro {
-    background-image: url(./images/tree.jpg);
+    background-image: url(./images/me.jpg);
 }
 
 .content-middle {
-    background-image: url(./images/sudi.JPG);
+
 }
 
 .content_end {
